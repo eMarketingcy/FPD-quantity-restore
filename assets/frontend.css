@@ -1,0 +1,4 @@
+/* Frontend base tweaks when quantity restore is active */
+.quantity.quantity--hidden{display:inline-flex!important}
+.quantity .qty{max-width:100px}
+.single-product .cart .quantity{margin-right:.75rem}

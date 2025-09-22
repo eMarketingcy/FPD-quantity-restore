@@ -1,0 +1,153 @@
+/* Admin UI for FPD Quantity Restore (v1.3.0) */
+.fpdqr-wrap{max-width:1200px;margin: 0;font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;background: #f8fafc;min-height: 100vh;}
+.fpdqr-columns{display:grid;grid-template-columns:2fr 1fr;gap:20px}
+.fpdqr-col-aside{position:sticky;top:24px;height:fit-content}
+.fpdqr-panel{background:#fff;border-radius:14px;padding:18px 20px;color:#64748b;box-shadow:0 4px 16px rgba(0,0,0,.25)}
+.fpdqr-panel h2{font-size:18px;margin:0 0 10px;color:#1e293b}
+.fpdqr-desc{margin-top:0;color:#282828}
+.fpdqr-card{background:#f8fafc;border:1px solid transparent;border-radius:12px;padding:14px 14px;margin:12px 0}
+.fpdqr-label{display:block;font-weight:600;margin-bottom:6px;color:#64748b}
+.fpdqr-help{margin:.25rem 0 0;color:#282828}
+.fpdqr-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.fpdqr-col-full{grid-column:1/-1}
+.fpdqr-row{display:flex;align-items:center;gap:10px}
+.fpdqr-input, .fpdqr-panel select, .fpdqr-panel input[type=text]{background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:8px 10px;color:#374151;width:100%}
+.fpdqr-checkbox{display:inline-flex;align-items:center;gap:6px;font-size:12px;color:#646970}
+.fpdqr-switch input[type=checkbox]{transform:scale(1.1)}
+.fpdqr-list{margin:.5rem 0 0 1rem;list-style:disc;color:#98a2b3}
+.fpdqr-muted{color:#98a2b3}
+.fpdqr-col {gap: 20px;display: grid;}
+
+/* Header */
+.fpdqr-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 2rem;
+    margin: -20px -20px 2rem -20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 20px rgba(102, 126, 234, 0.3);
+}
+
+.fpdqr-header-content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.fpdqr-logo svg {
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+}
+
+.fpdqr-header-text h1 {
+    margin: 0;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: white;
+}
+
+.fpdqr-header-text p {
+    margin: 0.25rem 0 0 0;
+    opacity: 0.9;
+    font-size: 0.95rem;
+}
+
+.fpdqr-version-badge {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    backdrop-filter: blur(10px);
+}
+.fpdqr-header-text .notice {
+    display: none;
+}
+
+.fpdqr-info-card {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.fpdqr-info-header {
+    padding: 1.5rem;
+    background: #f8fafc;
+    border-bottom: 1px solid #e2e8f0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fpdqr-info-header h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1e293b;
+}
+
+.fpdqr-status-badge {
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.fpdqr-status-active {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.fpdqr-info-content {
+    padding: 1.5rem;
+}
+
+/* Stats */
+.fpdqr-stat {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.fpdqr-stat:last-child {
+    border-bottom: none;
+}
+
+.fpdqr-stat-label {
+    font-size: 0.9rem;
+    color: #64748b;
+}
+
+.fpdqr-stat-value {
+    font-weight: 600;
+    color: #1e293b;
+}
+
+.fpdqr-status-ok {
+    color: #059669;
+}
+
+.fpdqr-status-error {
+    color: #dc2626;
+}
+
+/* Buttons */
+.fpdqr-panel .button-primary{background:#2563eb;border-color:#1d4ed8;box-shadow:none}
+.fpdqr-panel .button-primary:hover{background:#1d4ed8;border-color:#1e40af}
+
+
+/* Footer */
+.fpdqr-footer {
+    text-align: center;
+    padding: 2rem;
+    color: #64748b;
+    font-size: 0.9rem;
+    border-top: 1px solid #e2e8f0;
+    margin-top: 2rem;
+}
