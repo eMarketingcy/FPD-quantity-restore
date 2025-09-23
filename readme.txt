@@ -4,7 +4,7 @@ Tags: woocommerce, fancy product designer, quantity, breakdance, cart, admin
 Requires at least: 5.8
 Tested up to: 6.6
 Requires PHP: 7.2
-Stable tag: 1.3.0
+Stable tag: 1.3.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Author: eMarketing Cyprus
@@ -13,11 +13,6 @@ Restore the quantity selector on products customized with Fancy Product Designer
 
 == Description ==
 FPD often hides the WooCommerce quantity input and forces qty=1, because its workflow assumes one unique design at a time. This plugin shows the quantity selector again, duplicating the same design for the selected quantity.
-
-New in 1.3.0:
-* **Modernized admin UI** with separate CSS/JS assets.
-* **Separated fields** for each layout property with !important toggles.
-* Frontend assets split into **frontend.css** and **frontend.js**.
 
 == Installation ==
 1. Upload the `fpd-qty-restore` folder to `/wp-content/plugins/` or install the ZIP via wp-admin.
@@ -36,6 +31,9 @@ New in 1.3.0:
 `apply_filters( 'fpd_qr_is_fpd_product', bool $detected, int $product_id )`
 
 == Changelog ==
+= 1.3.1 =
+* **Fix**: Corrected a critical bug where the "sold individually" override was applied to all products, not just those using FPD. The plugin now correctly checks if a product is an FPD product before applying changes, ensuring standard WooCommerce products are unaffected.
+
 = 1.3.0 =
 * New modern admin UI (separate CSS/JS).
 * Split frontend assets; separated fields and !important toggles.
