@@ -2,7 +2,7 @@
 /**
  * Plugin Name: FPD Quantity Restore
  * Description: Restore quantity selector for Fancy Product Designer products. Per-product & global toggle + modern admin UI with layout controls (Breakdance). Styles apply only when FPD is present.
- * Version: 1.3.0
+ * Version: 1.3.1
  * Author: eMarketing Cyprus
  * Requires at least: 5.8
  * Requires PHP: 7.2
@@ -342,7 +342,26 @@ final class FPD_Qty_Restore {
 
     public function filter_sold_individually($sold, $product) {
         if (!$product || !is_a($product, 'WC_Product')) return $sold;
-        if (self::product_allows_qty($product->get_id())) return false;
+        
+        // Only override for FPD products that allow quantity
+        if (self::product_allows_qty($product->get_id())) {
+            return false; // Allow quantities for FPD products
+        }
+        
+        
+        $product_id = $product->get_id();
+        
+        // Only process if this is an FPD product
+        if (!self::is_fpd_product($product_id)) {
+            return $sold; // Return original WooCommerce setting for non-FPD products
+        }
+        
+        // For FPD products, check if quantity is allowed
+        if (self::product_allows_qty($product_id)) {
+            return false; // Allow quantities for FPD products with quantity enabled
+        }
+        
+        // For FPD products without quantity enabled, respect WooCommerce setting
         return $sold;
     }
 
